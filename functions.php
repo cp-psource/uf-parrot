@@ -1,5 +1,13 @@
 <?php
 
+require 'psource/psource-plugin-update/psource-plugin-updater.php';
+use Psource\PluginUpdateChecker\v5\PucFactory;
+$MyUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=uf-parrot',
+	__FILE__, 
+	'uf-parrot'
+);
+
 include_once get_template_directory() . '/library/upfront_functions.php';
 include_once get_template_directory() . '/library/class_upfront_debug.php';
 include_once get_template_directory() . '/library/class_upfront_server.php';
